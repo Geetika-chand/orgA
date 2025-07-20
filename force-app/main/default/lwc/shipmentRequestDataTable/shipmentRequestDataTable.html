@@ -1,0 +1,18 @@
+<template>
+     <lightning-layout >
+        <lightning-layout-item flexibility="grow" class="slds-m-around_medium">
+            <lightning-card title="Shipment Requests" icon-name="custom:custom63">
+                <lightning-datatable
+                    key-field="Id"
+                    data={shipments}
+                    columns={columns}
+                    hide-checkbox-column="true"
+                    show-row-number-column="true"
+                    onrowaction={handleRowAction}
+                    onsave={handleSave}
+                    draft-values={draftValues}>
+                </lightning-datatable>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
